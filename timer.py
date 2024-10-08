@@ -4,6 +4,7 @@ timer.py is a simple Python script that will allow user to set timer duration.
 Upon timer expiry, user will see the time up meme and sound notification.
 timer.py uses the time library to help keep track of time
 """
+print ("Players stand")
 
 
 # This program is timer that counts down
