@@ -8,6 +8,7 @@ timer.py uses the time library to help keep track of time
 
 # This program is timer that counts down
 
+print("Players stand")
 
 import time # The time library has a sleep function that will pause the script for a specifized amount of time
 from PIL import Image # the pillow library makes it easy to display images 
