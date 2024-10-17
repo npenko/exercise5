@@ -5,20 +5,34 @@ Upon timer expiry, user will see the time up meme and sound notification.
 timer.py uses the time library to help keep track of time
 """
 
+# Global variable to store the last word entered
+last_word = ""
 
-# This program is timer that counts down
+# Function to handle user input
+def get_user_input():
+    global last_word
+    while True:
+        user_input = input("Enter a word: ")
+        if user_input:  # Update the last word if the input is not empty
+            last_word = user_input.split()[-1]  # Get the last word entered
 
-print("Players stand")
+# Function to sleep for a random time
+def sleep_random_time():
+    set_time = random.randint(10, 25)
+    time.sleep(set_time)
 
-import time # The time library has a sleep function that will pause the script for a specifized amount of time
-from PIL import Image # the pillow library makes it easy to display images 
+# Main logic
+#print("Players stand")
 
-im = Image.open("times-up.jpeg")
+# Start the thread for user input
+#input_thread = threading.Thread(target=get_user_input)
+#input_thread.daemon = True  # Daemon thread will automatically exit when the main thread ends
+#input_thread.start()
 
-# ask user to enter desired countdown time
-set_time = int(input("Please set your timer in seconds: "))
+# Sleep for a random amount of time
+#sleep_random_time()
 
-time.sleep(set_time)
+# After waking up, print the last word entered
+#print(f"The winner is: {last_word}")
 
-im.show()
 
