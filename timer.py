@@ -1,6 +1,7 @@
 import random
 import time
 import threading
+from PIL import Image
 
 
 # Global variable to store the list of names
@@ -21,7 +22,10 @@ def sleep_random_time():
         print(f"The winner is: {last_word[-1]}")  # Last name entered wins
     else:
         print("No one entered a name!")
-    
+
+    # Show an image when the game ends
+    image = Image.open('times-up.jpg')
+    image.show()
  
 # Function to handle user input
 def get_user_input():
